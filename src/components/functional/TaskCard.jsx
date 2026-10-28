@@ -19,7 +19,7 @@ const TaskCard = ({ task, onToggleStatus, onDeleteTask }) => {
 
         <div className="task-card-body">
           <div className="task-card-header">
-            <h3 className={`task-title ${isCompleted ? 'strikethrough' : ''}`}>
+            <h3 className="task-title">
               {task.title}
               <span className="task-category-tag"> ({task.category.toLowerCase()})</span>
             </h3>

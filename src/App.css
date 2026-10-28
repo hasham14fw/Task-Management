@@ -481,9 +481,8 @@
   color: var(--text-main);
 }
 
-.task-title.strikethrough {
-  text-decoration: line-through;
-  color: var(--text-muted);
+.task-title.completed-title {
+  color: var(--text-main);
 }
 
 .task-badges {
