@@ -10,17 +10,17 @@ import './App.css';
 const INITIAL_TASKS = [
   {
     id: '1',
-    title: 'Architect React Component Tree',
-    description: 'Design modular functional and class component boundaries.',
+    title: 'Web Quiz on Monday',
+    description: 'Prepare chapters 3 and 4 covering React component architecture.',
     priority: 'High',
-    category: 'Work',
-    status: 'completed',
-    createdAt: '10:00 AM'
+    category: 'Study',
+    status: 'pending',
+    createdAt: '09:00 AM'
   },
   {
     id: '2',
-    title: 'Implement ActivityLogger with Lifecycle Methods',
-    description: 'Track operations using componentDidMount & componentDidUpdate.',
+    title: 'Meeting with Group Chief',
+    description: 'Review project milestones, deliverables, and component architecture.',
     priority: 'High',
     category: 'Work',
     status: 'completed',
@@ -28,21 +28,21 @@ const INITIAL_TASKS = [
   },
   {
     id: '3',
-    title: 'Apply React Hooks (useMemo, useCallback, useRef)',
-    description: 'Optimize filtering calculations and manage auto-focusing.',
+    title: 'Frontend Lab Assignment Submission',
+    description: 'Submit GitHub repository URL and Word documentation on GCR.',
     priority: 'Medium',
     category: 'Study',
-    status: 'pending',
-    createdAt: '11:15 AM'
+    status: 'completed',
+    createdAt: '11:45 AM'
   },
   {
     id: '4',
-    title: 'Prepare GitHub Repository and Deployment',
-    description: 'Verify all requirements, capture dashboard screenshots, and submit.',
+    title: 'Deploy Dashboard Application',
+    description: 'Verify live build deployment on Vercel/Netlify.',
     priority: 'Medium',
     category: 'Project',
     status: 'pending',
-    createdAt: '12:00 PM'
+    createdAt: '01:15 PM'
   }
 ];
 
@@ -51,7 +51,7 @@ function App() {
 
   const [tasks, setTasks] = useState(() => {
     try {
-      const stored = localStorage.getItem('dashboard_tasks');
+      const stored = localStorage.getItem('dashboard_tasks_v2');
       return stored ? JSON.parse(stored) : INITIAL_TASKS;
     } catch (e) {
       return INITIAL_TASKS;
@@ -65,7 +65,7 @@ function App() {
 
   // Sync tasks to localStorage
   useEffect(() => {
-    localStorage.setItem('dashboard_tasks', JSON.stringify(tasks));
+    localStorage.setItem('dashboard_tasks_v2', JSON.stringify(tasks));
   }, [tasks]);
 
   // Dynamic document title update
